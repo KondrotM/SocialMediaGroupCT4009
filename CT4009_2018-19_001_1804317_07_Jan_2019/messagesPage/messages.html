@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="messages.css">
+	<script type="text/javascript" src="messages.js"></script>
+    <meta charset="UTF-8">
+    <title> SOCMED: Messaging</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box header">
+            <center>
+            <br>
+            <h1> SOCMED</h1>
+            </center>
+            <p>| messages | <a href=../postPage/post.html> post </a> | <a href=../friendsPage/friends.html> friends </a> | <a href="" onmousedown="logout()"> log out </a> | </p>
+        </div>
+        <div class="box messagestitle">MESSAGES | <span id="selectedUserNameMessages"></span></div>
+        <div id="contactsBox" class="box contacts">CONTACTS <br>
+            <input type="text" id = "txtUsername" name="username" placeholder="Enter Username">
+            <input type="submit" id="submitUsr" value="Add" onmousedown="addUser()">
+			<div id="insertFriendBefore"></div> <!-- Because there is no document.body.insertAfter, only insertBefore -->
+        </div>
+        <div id="messagesBox" class="box messages">
+        </div>
+        <div class="box textbox">
+            <textarea type="text" id="txtMessage" name="message" length="200px" required="required"></textarea>
+        </div>
+        <div class="box send"> 
+            <center>
+            <button id="msgSendButton" onmousedown="sendMessage()" class="button" disabled="true">Send</button>
+            </center>
+        </div>
+    </div>
+</body>
+</html>

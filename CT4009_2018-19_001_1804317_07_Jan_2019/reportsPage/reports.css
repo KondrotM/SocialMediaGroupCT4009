@@ -1,0 +1,90 @@
+html, body{ 
+    min-height: 100%; 
+    overflow-x: hidden;
+}
+
+.header {
+    min-height: 20vh;
+    max-height: 20vh;
+    background-color: #3A775C;
+    grid-column: 1;
+    grid-row: 1;
+}
+/*
+.textbox{
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: 14vh;
+    max-height: 14vh;
+    grid-column: 1/3;
+    grid-row: 2;
+}
+*/
+
+.heading{
+/*    min-width: 20vw;*/
+/*    max-width: 20vw;*/
+    min-height: 10vh;
+    max-height: 10vh;
+    background-color: #3A775C;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/*
+.postbox{
+    min-width: 10vw;
+    max-width: 10vw;
+    grid-column: 4;
+    grid-row: 2;
+}
+*/
+/*Wall contents emulate that of a normal user wall, but only show posts flagged as reported*/
+.wall{
+    min-height: 60vh;
+    max-height: 60vh;
+    grid-column: 1;
+    grid-row:3;
+    overflow-y: scroll;
+}
+.container {
+  border: 2px solid #28513f;
+  background-color: #30624c;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  margin-bottom: 0;
+}
+.commentbox{
+  border: 2px solid #30624c;
+  background-color: #28513f;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.user {
+  font-size: 120%;
+  color: #aaa
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.postImageBox img{
+    float: left;
+    max-width: 30%;
+    max-height: 40vh; /* vh used as the image itself can define the % height of the post */ 
+    width: auto;
+    margin-right: 20px;
+    border-radius: 3%;
+}

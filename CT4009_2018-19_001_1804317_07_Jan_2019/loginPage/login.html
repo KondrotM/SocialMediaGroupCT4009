@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title> SocMed </title>
+		<meta charset="utf-8">
+        <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="login.css">   
+		<script type="text/javascript" src="login.js"></script>
+	</head>
+	<body>
+        <div class="wrapper">
+        <div class= "box header">
+            <center> <h1> SOCMED</h1>
+            <h3> Social Media for Medicine Societies</h3>
+            </center></div>
+            <div class="box wall">
+		<center>
+			<h4> Log in: </h4>
+            <form onsubmit="checkLogin()" id="formUserLogin"> <!--compares with accounts already created-->
+                <label> Username: </label>
+                <input type="text" id = "txtUserName" name="userName" required="required"><br><br>
+
+                <label> Password: </label>
+                <input type="password" id = "txtPassword" name="password" required="required"><br><br> 
+                <input type="submit" id = "btnLogin" value="Login">
+			</form> 
+			<h4> Don't have an account? <a href="../registerPage/register.html">Register</a></h4>
+        </center>
+            </div>
+        </div>
+	</body>
+</html>

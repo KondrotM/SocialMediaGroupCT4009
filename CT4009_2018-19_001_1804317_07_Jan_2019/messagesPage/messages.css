@@ -1,0 +1,119 @@
+.header {
+    min-height: 20vh;
+    max-height: 20vh;
+    background-color: #3A775C;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+.contacts {
+    grid-column: 1 ;
+    grid-row: 2/5;
+    overflow-y: scroll;
+}
+.messagestitle{
+    background-color: #3A775C;
+    grid-column: 2/4 ;
+    grid-row: 2 ;
+    
+}
+.messages {
+    min-height: 65vh;
+    max-height: 65vh;
+    background-color: #3A775C;
+    grid-column: 2/4 ;
+    grid-row: 3 ;
+    overflow-y: scroll;
+}
+.textbox {
+    background-color: #fff;
+    grid-column: 2/3;
+    grid-row: 4;
+}
+.send {
+    background-color: #3A775C;
+    grid-column: 3;
+    grid-row: 4
+    }
+
+
+.button{
+/*    the button unfortunately doesn't fill the entire box*/
+    background-color: #32946F;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.friend{
+  border: 2px solid #28513f;
+  background-color: #30624c;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;  
+  cursor: pointer;
+}
+
+/**/
+/*base containers and styling from w3schools*/
+/**/
+/* Chat containers */
+.container {
+  border: 2px solid #28513f;
+  background-color: #30624c;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #30624c;
+  background-color: #28513f;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+    .time-right {
+      float: right;
+      color: #aaa;
+    }
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+/**/
+/**/
+.profilePicture{
+	max-height:100px;
+	max-width:100px;
+}

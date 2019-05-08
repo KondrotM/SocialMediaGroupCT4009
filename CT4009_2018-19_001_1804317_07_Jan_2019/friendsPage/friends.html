@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="friends.css">   
+	<script type="text/javascript" src="friends.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box header">
+            <center>
+            <br>
+            <h1> SOCMED</h1>
+            </center>
+            <p>| <a href=../messagesPage/messages.html> messages </a> | <a href=../postPage/post.html> post </a> | friends | <a href="" onmousedown="logout()"> log out </a> | </p>
+        </div>
+        <div id="friendsListBox" class="box friends">
+            <h1>Friends</h1>
+		</div>
+        <div id="friendRequestsBox" class="box friendsrequests">
+            <h1>Requests</h1>
+			<div id="insertBeforeFriendRequests"></div><!-- I could've done appendChild in my js code but I decided to leave it as it worked --->
+        </div>
+    </div>
+</body>
+</html>

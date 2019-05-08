@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="post.css">   
+	<script type="text/javascript" src="post.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="box header">
+			<center>
+			<br>
+			<h1> SOCMED</h1>
+			</center>
+			<p>| <a href="../messagesPage/messages.html"> messages </a> | post | <a href="../friendsPage/friends.html"> friends </a> | <a href="" onmousedown="logout()"> log out </a> | </p>
+		</div>
+		<div class="box textbox">
+			<textarea type="text" id="txtMessage" name="message" length="200px" required="required"></textarea>
+		</div>
+		<div class="box imagebox">
+			<input type="file" id="imgPpf" name="pfp" accept="image/png, image/jpeg" onchange="readURL(this);">
+			<img src="" id="displayedUploadedImg" style="display: none;">
+		</div>
+		<div class="box postbox">
+			<button onmousedown="postWall()" class="button">Post to Wall</button>
+		</div>
+		<div id="postWallBox" class="box wall">  
+			<div id="insertPostBefore"></div>
+		</div>
+	</div>
+
+
+</body></html>

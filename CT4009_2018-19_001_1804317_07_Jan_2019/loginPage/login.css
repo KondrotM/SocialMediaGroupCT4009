@@ -1,0 +1,16 @@
+.header {
+    min-height: 20vh;
+    max-height: 20vh;
+    background-color: #3A775C;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.wall{
+    font-size: 100%;
+    min-height: 75vh;
+    max-height: 75vh;
+    grid-column: 1;
+    grid-row:2;
+    overflow-y: scroll;
+}

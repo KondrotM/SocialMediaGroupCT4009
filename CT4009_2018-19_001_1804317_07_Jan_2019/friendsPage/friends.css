@@ -1,0 +1,78 @@
+.header {
+    min-height: 20vh;
+    max-height: 20vh;
+    background-color: #3A775C;
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+.friendsrequests {
+/*    78vh is often used instead of 80 to make up for the margins*/
+    min-height: 78vh;
+    max-height: 78vh;
+    min-width: 20vw;
+    max-width: 20vw;
+    grid-column: 1;
+    grid-row: 2;
+    overflow-y: scroll;
+}
+
+.friends {
+    min-height: 78vh;
+    max-height: 78vh;
+    min-width: 80vw;
+    max-width: 80vw;
+    grid-column: 2;
+    grid-row: 2;
+    overflow-y: scroll;
+}
+
+.container {
+/*container for the messages and notifications.*/
+  border: 2px solid #28513f;
+  background-color: #30624c;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  margin-bottom: 0;
+}
+.commentbox{
+/*alternative theme for sent messages, appears when the 2nd user sends a message.*/
+  border: 2px solid #30624c;
+  background-color: #28513f;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+.user {
+/*    user names have their own styling*/
+  font-size: 120%;
+  color: #aaa
+}
+/*Base container code taken from w3schools tutorial on chat messages*/
+/* Clear floats */
+.container::after {
+/* the '::after' function is executed at the end of every contanier element*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+    float: left;
+    max-width: 30%;
+    max-height: 40vh;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 3%;
+}
+.profilePicture{
+	height: 150px;
+	width: 150px;
+}
+.removeFriend{
+	cursor:pointer;
+	color: #aaa
+}

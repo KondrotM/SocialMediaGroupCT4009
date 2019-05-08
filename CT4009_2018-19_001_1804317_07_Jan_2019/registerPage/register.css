@@ -1,0 +1,18 @@
+.header {
+    min-height: 20vh;
+    max-height: 20vh;
+    background-color: #3A775C;
+    grid-column: 1;
+/*    header cannot be added to styles.css as each page has a different number of grid-columns*/
+    grid-row: 1;
+}
+
+.wall{
+    font-size: 100%;
+    min-height: 75vh;
+    max-height: 75vh;
+    grid-column: 1;
+    grid-row:3;
+    overflow-y: scroll;
+}
+    
