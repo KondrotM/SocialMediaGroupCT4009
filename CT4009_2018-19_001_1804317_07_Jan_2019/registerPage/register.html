@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="register.css">
-	<meta charset="utf-8">
-	<title> SocMed: Register </title>
-	<script type="text/javascript" src="register.js"></script>
-</head>
-<body>
-    <div class="wrapper">
+	<head>
+		<meta charset="utf-8">
+		<title> Flogger - Buy and sell your Item Online - Registration </title>
+    	<link href="../css/styles.css" type="text/css" rel = "stylesheet"/>
+		<script
+		  src="http://code.jquery.com/jquery-3.3.1.js"
+		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		  crossorigin="anonymous"></script>
+		<script src="../lib/js/indexeddb.js"></script>
+
+	</head>
+	<body>
+        <div class="wrapper">
         <div class="box header"><center> <h1> SOCMED</h1>
 		<h3> Social Media for Medicine Societies</h3>
 	</center></div>
 	<div class = "box wall">
 		<center>
-		<form onsubmit="checkFields()" id="formUserRegistration" >
-			<h4> Register Here</h4>
-			<label> First Name: </label>
-			<input type="text" id = "txtFirstName" name="firstName" required="required"> <br> <br>
-			<label> Last Name: </label>
-			<input type="text" id = "txtLastName" name="lastName" required="required"> <br> <br>
-			<label> User Name: </label>
-			<input type="text" id = "txtUserName" name="userName" required="required"> <br> <br>  
-			<label> Email: </label>
-			<input type="email" id = "txtEmail" name="email" required="required"> <br> <br>
-			<label> Password: </label>
-			<input type="password" id = "txtPassword" name="password" required="required"> <br> <br>
-			<label> Confirm Password: </label>
-			<input type="password" id = "txtConfirmPassword" name="confirmPassword" required="required"> <br> <br>
-			<label>Profile Picture:</label>
-			<input type="file" id="imgPpf" name="pfp" onchange="readURL(this);" accept="image/png, image/jpeg"><br><br>
-			<img src="" id="displayedUploadedImg" style="display: none;">
-			<label> Bio: (optional)</label>
-			<input type="text" id = "txtBio" name="bio"> <br><br>
-			<input type="submit" id = "btnRegister" value="Register" onmousedown="checkFields()">
-			<br><br>
-			<a href=../loginPage/login.html> Back to login </a>
-		</form>
-		</center>
-	</div>	
-    </div>
-</body>
+			<section>
+                <div id="divMessage"></div>
+				<form onsubmit="checkFields()" id="formUserRegistration" enctype="multipart/form-data" method="post">
+				
+					<h4> Register Here </h4> <br> <br>
+					
+					<label> First name: </label>
+					<input type="text" id = "txtFirstName" name="firstName" required="required"> <br> <br>
+					<label> Last name: </label>
+					<input type="text" id = "txtLastName" name="lastName" required="required"> <br> <br>
+                    <label> User Name: </label>
+                    <input type="text" id = "txtUserName" name="userName" required="required"> <br> <br>
+					<label> Email: </label>
+					<input type="email" id = "txtEmail" name="email" required="required"> <br> <br>
+					<label> Password: </label>
+					<input type="password" id = "txtPassword" name="password" required="required"> <br> <br>
+					<label> Confirm Password: </label>
+					<input type="password" id = "txtConfirmPassword" name="confirmPassword" required="required"> <br> <br>
+                    <label> Profile Picture (Optional) </label>
+                    <input type="file" id="file" name="file" accept="image/png, image/jpeg"><br><br>
+                    <label> Bio: (optional)</label>
+			        <input type="text" id = "txtBio" name="bio"> <br><br>
+					<input type="submit" id = "btnRegister" value="Register">
+                    <br><br>
+					<a href=../loginPage/login.html> Back to login </a>
+				</form>  
+			</section>
+        </center>
+            </div>
+        </div>
+			<footer>
+				&copy; 2017 Flogger
+			</footer>
+			
+			<script src="./register.js"></script>
+			<script src="./registerDAO.php"></script>
+			
+	</body>
 </html>

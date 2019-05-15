@@ -1,0 +1,30 @@
+<?php
+    $name = 'Andy';
+    $age = 31;
+    $favouriteTakeaways = ['Indian', 'Italian', 'Thai'];
+    $favouriteCodeLanguages = ['HTML', 'CSS', 'JavaScript', 'PHP'];
+?>
+
+<!doctype HTML>
+<html>
+    <head>
+        <title>Basic PHP example</title>
+        <style>
+        body {
+            font-size: 2rem;
+            padding: 2rem;
+            font-family: sans-serif;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Hello, my name is <?= $name; ?></h1>
+        <p>I’m <?= $age ?> years old and my favourite takeaways are:</p>
+        <ul>
+            <?php foreach($favouriteTakeaways as $item): ?>
+                <li><?= $item; ?></li>
+            <?php endforeach; ?>
+        </ul>
+        <p>My favourite code languages are <?= join(', ', $favouriteCodeLanguages); ?></p>
+    </body>
+</html>
