@@ -8,15 +8,12 @@
 	}
 
 	function createUser() {
-		$validation = true; //creates used if validation is valid
 		$firstname = $_POST['firstName']; //grabs variables from userform on register.html
 		$lastname = $_POST['lastName']; // ^
         $user_name = $_POST['userName']; // ^
 		$email = $_POST['email']; // ^
 		$pass = $_POST['password']; // ^
         $bio = $_POST['bio']; // ^
-		//move_uploaded_file($_FILES['pfp']['tmp_name'],"../images/".$_FILES['pfp']['name']);
-        //$q = "UPDATE tbl_pfp SET image ="
         
         if($bio == ""){
             $bio = 'This user has no bio.'; // sets 'empty' bio if bio is empty
@@ -95,7 +92,7 @@
         }
 	} 
 
-	function sendEmail($emailTo, $verificationcode) { // sends out email with verification code
+	function sendEmail($emailTo, $verificationcode) { // creates email with verification code
 		$from="s1804317@glos.ac.uk";
 		$headers = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -107,7 +104,7 @@
 			'X-Mailer: PHP/' . phpversion();
 
 		// Compose the message of the email
-		$body = 'Thank you for registering with Flogger. <br>';
+		$body = 'Thank you for registering with SocMed. <br>';
 		$body = $body.'Please click the link below to activate your account. <br>';
 		$link = 'http://ct4009-matrot.studentsites.glos.ac.uk/CT4009_2018-19_001_1804317_07_Jan_2019/registerPage/registerDAO.php?'.
 				'phpfunction=verifyUser&email='.$emailTo.
