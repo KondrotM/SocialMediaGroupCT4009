@@ -5,6 +5,11 @@
         <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="login.css">   
 		<script type="text/javascript" src="login.js"></script>
+        <script
+		  src="http://code.jquery.com/jquery-3.3.1.js"
+		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		  crossorigin="anonymous"></script>
+        
 	</head>
 	<body>
         <div class="wrapper">
@@ -14,8 +19,10 @@
             </center></div>
             <div class="box wall">
 		<center>
-			<h4> Log in: </h4>
-            <form onsubmit="checkLogin()" id="formUserLogin"> <!--compares with accounts already created-->
+            <section>
+                <h4> Log in: </h4>
+                <div id="divMessage"></div>
+            <form onsubmit="checkLogin()" id="formUserLogin" method="post"> <!--compares with accounts already created-->
                 <label> Username: </label>
                 <input type="text" id = "txtUserName" name="userName" required="required"><br><br>
 
@@ -24,7 +31,8 @@
                 <input type="submit" id = "btnLogin" value="Login">
 			</form> 
 			<h4> Don't have an account? <a href="../registerPage/register.html">Register</a></h4>
-        </center>
+            </section>
+                </center>
             </div>
         </div>
 	</body>
