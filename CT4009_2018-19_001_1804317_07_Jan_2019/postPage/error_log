@@ -3,3 +3,31 @@
 [17-May-2019 06:03:19 UTC] PHP Parse error:  syntax error, unexpected 'move_uploaded_file' (T_STRING) in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 18
 [17-May-2019 06:05:02 UTC] PHP Parse error:  syntax error, unexpected 'move_uploaded_file' (T_STRING) in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 17
 [17-May-2019 06:45:57 UTC] PHP Parse error:  syntax error, unexpected '$sql' (T_VARIABLE) in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 11
+[17-May-2019 08:22:06 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 14
+[17-May-2019 08:22:06 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 15
+[17-May-2019 08:24:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 14
+[17-May-2019 08:24:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 15
+[17-May-2019 08:27:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 15
+[17-May-2019 08:27:13 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 16
+[17-May-2019 08:28:44 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 15
+[17-May-2019 08:28:44 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 16
+[17-May-2019 08:29:19 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 15
+[17-May-2019 08:29:19 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 16
+[17-May-2019 08:30:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 15
+[17-May-2019 08:30:14 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 16
+[17-May-2019 08:47:01 UTC] PHP Parse error:  syntax error, unexpected 'while' (T_WHILE), expecting ',' or ';' in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 18
+[18-May-2019 12:04:50 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 35
+[18-May-2019 12:21:44 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[18-May-2019 12:21:54 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[18-May-2019 12:22:05 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[18-May-2019 12:26:36 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 30
+[18-May-2019 23:37:52 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[18-May-2019 23:37:54 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[19-May-2019 00:09:47 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 12
+[19-May-2019 00:09:49 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 12
+[19-May-2019 00:11:14 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[19-May-2019 00:14:45 UTC] PHP Warning:  include(../include/getUser.php): failed to open stream: No such file or directory in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 17
+[19-May-2019 00:14:45 UTC] PHP Warning:  include(../include/getUser.php): failed to open stream: No such file or directory in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 17
+[19-May-2019 00:14:45 UTC] PHP Warning:  include(): Failed opening '../include/getUser.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/fileSubmit.php on line 17
+[19-May-2019 00:15:57 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 12
+[19-May-2019 00:31:06 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/s1804317matrot/public_html/CT4009-SocMedmk2/postPage/postDAO.php on line 44

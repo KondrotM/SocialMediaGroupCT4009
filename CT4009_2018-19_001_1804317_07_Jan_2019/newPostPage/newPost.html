@@ -1,13 +1,12 @@
-<!DOCTYPE html>
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel = "stylesheet" href="../css/styles.css" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="post.css"> 
+    <link rel="stylesheet" type="text/css" href="newPost.css"> 
     <script
 		  src="http://code.jquery.com/jquery-3.3.1.js"
 		  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 		  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="post.js"></script>
+	<script type="text/javascript" src="newPost.js"></script>
     <meta charset="UTF-8">
 </head>
 <body>
@@ -19,11 +18,16 @@
 			</center>
 			<p>| <a href="../messagesPage/messages.html"> messages </a> | post | <a href="../friendsPage/friends.html"> friends </a> | <a href="" onmousedown="logout()"> log out </a> | </p>
 		</div>
+        <form id="postForm" action="newPostDAO.php" enctype="multipart/form-data" method="post">
 		<div class="box textbox">
-            <a href="../newPostPage/newPost.html"> Create new post </a>
+			<textarea type="text" id="txtMessage" name="message" required="required"></textarea>
+			<input type="file" id="file" name="file" accept="image/png, image/jpeg"> 
+			<img src="" id="displayedUploadedImg" style="display: none;">
+			<button class="button">Post to Wall</button>
             </div>
+        </form>
 		<div id="postWallBox" class="box wall">  
-			<div id="insertPostBefore"></div>
+        <a href="../postPage/post.html"><br>--Back to posts wall</a>    
 		</div>
 	</div>
 

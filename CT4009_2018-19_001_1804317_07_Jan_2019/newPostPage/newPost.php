@@ -1,8 +1,5 @@
-<?php
+<?php 
     session_start();
-
-
-
     include "../include/config.php"; // connection to server
     $user_name = $_SESSION['name']; // user name set as variable
     $message = $_POST['message']; // grabs message from form
@@ -32,11 +29,14 @@
         
         $sql = "INSERT INTO `tbl_posts`(`User_Name`, `post_text` ,`post_image`, `post_time`) VALUES ('$user_name','$message','$filepath',CURRENT_TIMESTAMP)"; // uploads post row to SQL table
         if(mysqli_query($connection, $sql)) {
-            echo "Picture uploaded successfully <br>";
-            echo '<a href="post.html">Click here to return <br></a>';
+           // echo "Picture uploaded successfully <br>";
+            //echo '<a href="../postPage/post.html">Click here to return <br></a>';
+            //echo $_COOKIE['user_cookie'];
         } else {
-            echo mysqli_error($connection);
-            echo '<a href="posts.html">Click here to return</a>';
+            //echo mysqli_error($connection);
+            //echo '<a href="posts.html">Click here to return</a>';
+            
+            
         }
             
     
@@ -44,7 +44,7 @@
         $file_result .= "No File Uploaded or Invalid File ";
         $file_result .= "Error Code: " . $_FILES["file"]["error"] . "<br>";
     }
-    echo $file_result;
-
+//    echo $file_result;
+    echo "user name here ", $user_name;
     
 ?>

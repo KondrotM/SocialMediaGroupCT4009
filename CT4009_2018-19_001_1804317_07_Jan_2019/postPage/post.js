@@ -11,13 +11,20 @@ if (localStorage.getItem("reportedPostsData") !== null){ // loads reported posts
 	reportedPosts = JSON.parse(localStorage.getItem("reportedPostsData"));
 }
 window.onload = function () { // ensures that the html loads before the javascript
-	createPostWallElements();
-	createPostCommentElements();
+	createPostWallElements(); 
+	//createPostWallElements(); 
+	//createPostWallElements(); 
+	//createPostCommentElements();
 };
 
 function logout(){
 	localStorage.removeItem("selectedUserData"); //removes the log in data
 	localStorage.removeItem("loggedInData"); //removes the log in data
+    $.ajax({
+        type: "POST",
+        url: "postDAO.php",
+        data: "phpfunction=logout",
+    })
 	window.location.replace("../loginPage/login.html");
 }
 function postWall(){
@@ -46,6 +53,93 @@ function postWall(){
 }
 
 function createPostWallElements(){
+    $.ajax({
+        type: "POST",
+        url: "postDAO.php",
+        data: "phpfunction=getVisiblePosts",
+        dataType: 'json',
+        success: 
+        function(echoedMsg){
+            var posts = echoedMsg;
+            console.log('Something went right? ', posts);
+            removeElementsByClass("post");
+            var parentDiv = document.getElementById("postWallBox");
+            for (x in posts){
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "post");
+                console.log("X SHOULD BE HERE -> ",x);
+                newDiv.setAttribute("id", `'${posts[x][1]}'+'${posts[x][4]}'`);
+                var newContent = document.createElement("div");
+                newContent.setAttribute("class", "container");
+                if (posts[x][3] != ""){ //if an image has been uploaded
+                    var newContent2 = document.createElement("div");
+                    newContent2.setAttribute("class", "postImageBox");
+                    var newContent3 = document.createElement("img");
+                    newContent3.setAttribute("alt", "image")
+//                    dataImage = localStorage.getItem([newestPost.username+newestPost.image]);
+                    newContent3.setAttribute("src", posts[x][3]);
+                    newContent2.appendChild(newContent3);
+                    newContent.appendChild(newContent2);
+                }
+                var newContent2 = document.createElement("div");
+                newContent2.setAttribute("class", "user");
+//                var newContent3 = document.createTextNode(accountList[newestPost.username].firstName + " " + accountList[newestPost.username].lastName + " | " + newestPost.username);
+                var newContent3 = document.createTextNode(posts[x][1]);
+                newContent2.appendChild(newContent3);
+                newContent.appendChild(newContent2);
+                newContent2 = document.createElement("p");
+                newContent3 = document.createTextNode(posts[x][2]);
+                newContent2.appendChild(newContent3);
+                newContent.appendChild(newContent2);
+                newContent2 = document.createElement("div");
+                newContent2.setAttribute("class", "time-right");
+                newContent3 = document.createTextNode([new Date(posts[x][4])].toLocaleString()); // from JSON string to date object to string
+                newContent2.appendChild(newContent3);
+                newContent3 = document.createElement("br");
+                newContent2.appendChild(newContent3);
+                newContent3 = document.createElement("button");
+                var newContent4 = document.createTextNode("Report Post");
+                newContent3.appendChild(newContent4);
+                newContent3.setAttribute("onmousedown", `reportPost('${posts[x][1]}', '${posts[x][4]}')`)
+                newContent2.appendChild(newContent3);
+                newContent.appendChild(newContent2);
+                newDiv.appendChild(newContent);
+                newContent = document.createElement("div");
+                newContent.setAttribute("class", "commentbox");
+                newContent2 = document.createElement("textarea");
+                newContent2.setAttribute("type", "text");
+                newContent2.setAttribute("id", ["txtComment"+posts[x][1]+posts[x][4]]); // the id of the textarea will be a very long string consisting of "textComment", followed by the username, followed by the computer clock date/time (as a string)
+                newContent2.setAttribute("name", "comment");
+                newContent2.setAttribute("required", "required");
+                newContent.appendChild(newContent2);
+                newContent2 = document.createElement("button");
+                newContent2.setAttribute("class", "button");
+                newContent2.setAttribute("onmousedown", `postComment('${posts[x][1]}', '${posts[x][4]}')`);
+                newContent3 = document.createTextNode("Post Comment");
+                newContent2.appendChild(newContent3);
+                newContent.appendChild(newContent2);
+                newDiv.appendChild(newContent);
+                parentDiv.insertBefore(newDiv, insertPostBefore);                
+            }
+        },
+        error: function(msg){
+            console.log(msg);
+        }
+         
+                         
+                
+    });
+    
+//    request.done(function(msg){
+//        console.log(msg);
+//        console.log("anything");
+//    });
+//    
+//    
+    
+//    console.log(items);
+    
+   /* 
 	removeElementsByClass("post");
 	var parentDiv = document.getElementById("postWallBox");
 	var visiblePostUsers = Object.keys(accountList[loggedInUsername].friends);
@@ -130,7 +224,7 @@ function createPostWallElements(){
 		newContent.appendChild(newContent2);
 		newDiv.appendChild(newContent);
 		parentDiv.insertBefore(newDiv, insertPostBefore);
-	}
+	} */
 }
 
 function postComment(username, date){ //initializes the variable data for the comment

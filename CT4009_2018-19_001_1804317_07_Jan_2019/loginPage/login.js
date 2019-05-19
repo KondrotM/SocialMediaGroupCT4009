@@ -3,14 +3,14 @@ var admin = {
 	password: "okokok89"
 };
 
-if (loggedInUsername !== undefined){
-	if (loggedInUsername != admin.username){
-		redirectLoggedInUser();
-	}
-	else{
-		redirectAdmin();
-	}
-}
+//if (loggedInUsername !== undefined){
+//	if (loggedInUsername != admin.username){
+//		redirectLoggedInUser();
+//	}
+//	else{
+//		redirectAdmin();
+//	}
+//}
 
 
 function checkLogin(){ // checks log in fields

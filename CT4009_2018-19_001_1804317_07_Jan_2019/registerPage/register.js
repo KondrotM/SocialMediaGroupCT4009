@@ -56,7 +56,7 @@ function checkFields(){ //checks that mandatory fields have been filled in the r
             }
         },
         error: function(msg){
-            console.log(msg);
+            console.log(msg['responseText']);
         }
     });
  

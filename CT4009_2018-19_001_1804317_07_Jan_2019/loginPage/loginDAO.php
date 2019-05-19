@@ -24,6 +24,8 @@ function checkLogin() {
             } else{
                 session_start();
                 $_SESSION['user'] = $user_name;
+                setcookie('user_cookie',$user_name, time() +(86400*30),"../");
+                session_write_close();
                 echo 'true';
                 //header("Location: post.html");
                 //break;
@@ -34,7 +36,7 @@ function checkLogin() {
         
         
     } else {
-        echo "Username not recognised";        
+        echo "Username not recognised ";        
     }
         
 }
