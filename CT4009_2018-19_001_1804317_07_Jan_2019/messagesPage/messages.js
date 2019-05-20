@@ -47,7 +47,24 @@ function isFriends(user){ // returns true if the logged in user is friends with 
 }
 
 function addUser(){ // called when the "add" user button is pressed
-	var addedUserName = document.getElementById("txtUsername").value;
+    addedUserName = document.getElementById("txtUsername").value;
+    event.preventDefault(); // cancels the form submission, otherwise window reloads
+    console.log(addedUserName);
+    $.ajax({
+        type: "POST",
+        url: "messagesDAO.php",
+        data: "addedUserName="+addedUserName+"&phpfunction=addFriend",
+        success: function(echoedMsg){
+            console.log(echoedMsg);
+        },
+        error: function(msg){
+            console.log(msg) 
+    }
+    })
+    
+    /*
+    
+	
 	if(addedUserName !== loggedInUsername){ // checks that you're not trying to add yourself
 		var userNameMatched = false;
 		for (x in accountList){ //checks that the user exists in the database
@@ -77,6 +94,7 @@ function addUser(){ // called when the "add" user button is pressed
 		alert("You can't add yourself");
 		document.getElementById("txtUsername").value = "";
 	}
+    */
 }
 
 function addFriendElementsLoaded(){ // creates a div with the class "friend" and an id equivalent to the user's number of friends when they were added (1st friend = 1)

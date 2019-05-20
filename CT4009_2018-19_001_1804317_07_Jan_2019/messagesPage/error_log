@@ -1,0 +1,1 @@
+[20-May-2019 04:25:23 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1804317matrot/public_html/CT4009-SocMedmk2/messagesPage/messagesDAO.php on line 27
